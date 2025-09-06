@@ -1,4 +1,7 @@
- document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
+
+    document.body.classList.add("ready");
+
      // First, get the length of the chart-line
      const chartLine = document.querySelector('.tech-grid .chart-line');
      if (chartLine) {
@@ -45,10 +48,7 @@
          "<0.3" // start 0.3 seconds after the progress-bg
      );
 
-    gsap.fromTo('body',
-        {opacity: 0},
-        {opacity: 1, duration:0.5}
-    );
+
 
     gsap.fromTo('.floating-animation',
         {opacity:0, y: -20},
@@ -65,16 +65,16 @@
         }
     )
 
-   gsap.fromTo(
-    "#anchor a",
-    { opacity: 0, y: -20 },        // from state
-    { opacity: 1, y: 0,           // to state
-      stagger: 0.15,
-      delay: 1,
-      duration: 0.3,
-      ease: "power2.out"
-    }
-);
+    gsap.fromTo(
+        "#anchor a",
+        { opacity: 0, y: -20 },        // from state
+        { opacity: 1, y: 0,           // to state
+        stagger: 0.15,
+        delay: 1,
+        duration: 0.3,
+        ease: "power2.out"
+        }
+    );
 
     gsap.fromTo('nav button', 
         {opacity: 0, scale: 0.8},
@@ -148,16 +148,16 @@
 
     // Animate section header
     gsap.from(".features-header h2, .features-header p", {
-    scrollTrigger: {
-        trigger: ".features",
-        start: "top 80%", // when section enters viewport
-        toggleActions: "play none none reverse"
-    },
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power3.out"
+        scrollTrigger: {
+            trigger: ".features",
+            start: "top 80%", // when section enters viewport
+            toggleActions: "play none none reverse"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out"
     });
 
 
@@ -391,7 +391,7 @@
     });
 
 
-        const modal = document.getElementById('videoModal');
+    const modal = document.getElementById('videoModal');
     const video = document.getElementById('walkthruVideo');
     const openBtn = document.getElementById('openVideoModal');
     const closeBtn = document.getElementById('closeModal');
@@ -447,8 +447,8 @@
         ease: "sine.inOut"
     });
     });
- 
- });
+});
+
 
 
 

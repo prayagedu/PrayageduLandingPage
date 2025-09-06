@@ -11,7 +11,18 @@
             font-family: "Poppins", sans-serif;
 
         }
-        
+
+        /* Hide body by default */
+        body {
+            opacity: 0;
+        }
+
+        /* Show body smoothly when ready */
+        body.ready {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+                
         .gradient-bg {
             background: linear-gradient(135deg, #6e85ec 0%, #2136af 100%);
         }
@@ -59,6 +70,22 @@
                 linear-gradient(rgba(102, 126, 234, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(102, 126, 234, 0.1) 1px, transparent 1px);
             background-size: 50px 50px; */
+        }
+
+        .tech-grid h1,
+        .tech-grid p,
+        .tech-grid .flex button,
+        .tech-grid .dash-rect,
+        .tech-grid .dash-btn,
+        .tech-grid .chart-point,
+        .tech-grid .progress-bg,
+        .tech-grid .progress-value,
+        .floating-animation,
+        nav,
+        #anchor a,
+        nav button {
+        opacity: 0;
+        transform: translateY(40px); /* or scale(0.8) depending on your animation */
         }
     </style>
 </head>
