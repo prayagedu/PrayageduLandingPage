@@ -72,7 +72,7 @@
             background-size: 50px 50px; */
         }
 
-        .tech-grid h1,
+        /* .tech-grid h1,
         .tech-grid p,
         .tech-grid .flex button,
         .tech-grid .dash-rect,
@@ -85,8 +85,8 @@
         #anchor a,
         nav button {
         opacity: 0;
-        transform: translateY(40px); /* or scale(0.8) depending on your animation */
-        }
+        transform: translateY(40px);
+        } */
     </style>
 </head>
 <body class="bg-gray-50 overflow-y-scroll w-full h-full overscroll-none relative">
@@ -120,7 +120,7 @@
         <div id="videoModal" class="hiiden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500 z-50">
             <div class="relative w-[98%] md:w-[70%] h-[40%] md:h-[70%] rounded-xl bg-white overflow-hidden shadow-2xl">
                 <button id="closeModal" class="absolute top-4 right-4 text-white bg-gray-800/50 px-3 py-1 rounded-full hover:bg-gray-900 transition z-10">✕</button>
-                <video id="walkthruVideo" class="w-full h-full object-cover rounded-xl" controls>
+                <video id="walkthruVideo" class="w-full h-full object-cover rounded-xl opacity-0" controls>
                     <source src="/imgassets/walkthru.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

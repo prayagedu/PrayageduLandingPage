@@ -400,6 +400,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function openModal() {
         modal.classList.remove('pointer-events-none');
         gsap.to(modal, {opacity: 1, duration: 0.5});
+        gsap.fromTo('#walkthruVideo', 
+            {opacity: 0},
+            {opacity: 1}
+        )
         video.currentTime = 0;
         video.play();
     }
@@ -410,6 +414,11 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.classList.add('pointer-events-none');
             video.pause();
         }});
+
+        gsap.fromTo('#walkthruVideo', 
+            {opacity: 1},
+            {opacity: 0}
+        )
     }
 
     openBtn.addEventListener('click', openModal);
