@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", function() {
     gsap.from(".pain-point h2", {
         scrollTrigger: {
         trigger: ".pain-point",  // target Pain Point Section
-        start: "top 80%",   // when top of section hits 80% of viewport
+        start: "top 90%",   // when top of section hits 80% of viewport
         toggleActions: "play none none reverse"
         },
         y: 50,
         opacity: 0,
         duration: 1,
-        delay: 1,
+        delay: 0.5,
         ease: "power3.out"
     });
 
