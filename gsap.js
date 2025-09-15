@@ -28,25 +28,25 @@ document.addEventListener("DOMContentLoaded", function() {
      );
 
      // Right side animation (SVG)
-     tl.to(".tech-grid .dash-rect",
-         { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.7)" },
-         "<0.5" // start 0.5 seconds after the previous animation starts (so overlaps with left side)
-     ).to(".tech-grid .dash-btn",
-         { opacity: 1, scale: 1, stagger: 0.2, duration: 0.5, ease: "back.out(1.7)" },
-         "<0.3" // start 0.3 seconds after the dash-rect starts
-     ).to(".tech-grid .chart-line",
-         { strokeDashoffset: 0, duration: 2 },
-         "<0.5" // start 0.5 seconds after the dash-rect starts
-     ).to(".tech-grid .chart-point",
-         { opacity: 1, scale: 1, stagger: 0.1, duration: 0.5 },
-         "<0.5" // start 0.5 seconds after the chart-line starts (so halfway through the chart-line animation)
-     ).to(".tech-grid .progress-bg",
-         { opacity: 1, duration: 0.5 },
-         "<0.5"
-     ).to(".tech-grid .progress-value",
-         { scaleX: 1, duration: 1, transformOrigin: "left center", ease: "power2.out" },
-         "<0.3" // start 0.3 seconds after the progress-bg
-     );
+    //  tl.to(".tech-grid .dash-rect",
+    //      { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.7)" },
+    //      "<0.5" // start 0.5 seconds after the previous animation starts (so overlaps with left side)
+    //  ).to(".tech-grid .dash-btn",
+    //      { opacity: 1, scale: 1, stagger: 0.2, duration: 0.5, ease: "back.out(1.7)" },
+    //      "<0.3" // start 0.3 seconds after the dash-rect starts
+    //  ).to(".tech-grid .chart-line",
+    //      { strokeDashoffset: 0, duration: 2 },
+    //      "<0.5" // start 0.5 seconds after the dash-rect starts
+    //  ).to(".tech-grid .chart-point",
+    //      { opacity: 1, scale: 1, stagger: 0.1, duration: 0.5 },
+    //      "<0.5" // start 0.5 seconds after the chart-line starts (so halfway through the chart-line animation)
+    //  ).to(".tech-grid .progress-bg",
+    //      { opacity: 1, duration: 0.5 },
+    //      "<0.5"
+    //  ).to(".tech-grid .progress-value",
+    //      { scaleX: 1, duration: 1, transformOrigin: "left center", ease: "power2.out" },
+    //      "<0.3" // start 0.3 seconds after the progress-bg
+    //  );
 
 
 
@@ -218,18 +218,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Animate testimonials cards
-    gsap.from("#testimonials .grid > div", {
-        scrollTrigger: {
-            trigger: "#testimonials",
-            start: "top 80%",
-            toggleActions: "play none none reverse"
-        },
-        y: 60,        // slide up
-        opacity: 0,   // fade in
-        stagger: 0.2, // delay between cards
-        duration: 0.8,
-        ease: "power2.out"
-    });
+    // gsap.from("#testimonials .grid > div", {
+    //     scrollTrigger: {
+    //         trigger: "#testimonials",
+    //         start: "top 80%",
+    //         toggleActions: "play none none reverse"
+    //     },
+    //     y: 60,        // slide up
+    //     opacity: 0,   // fade in
+    //     stagger: 0.2, // delay between cards
+    //     duration: 0.8,
+    //     ease: "power2.out"
+    // });
 
     // Animate demo form fields
     gsap.from(".form .bg-white form > div", {
@@ -429,12 +429,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target === modal) closeModalFunc();
     });
 
-    simpleslider.getSlider({
-        container: document.getElementById('myslider'),
-        transitionTime:1,
-        delay:3.5
-    });
-
     gsap.utils.toArray(".animate-float").forEach(circle => {
     gsap.to(circle, {
         y: "random(-50,50)",
@@ -456,8 +450,14 @@ document.addEventListener("DOMContentLoaded", function() {
         ease: "sine.inOut"
     });
     });
+
+
+
+    // const swiper = new Swiper('.swiper', {
+    // speed: 400,
+    // spaceBetween: 100,
+    // });
 });
 
 
-
-
+    
