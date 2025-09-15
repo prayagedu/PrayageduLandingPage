@@ -43,7 +43,7 @@ body.ready {
         
 .gradient-bg {
     /* background: linear-gradient(135deg, #6e85ec 0%, #2136af 100%); */
-    background: linear-gradient(135deg, #fdfdfd 0%, #13216e 100%);
+    /* background: linear-gradient(135deg, #fdfdfd 0%, #13216e 100%); */
     /* background: linear-gradient(135deg, #fdfdfd 0%, #ffffff 100%); */
     /* background: aliceblue; */
 }
@@ -92,7 +92,8 @@ body.ready {
 
 .nav-color {
     /* background-color: rgba(37, 99, 235, 0.9); */
-    background-color: #697ada;
+    /* background-color: #697ada; */
+    background: linear-gradient(to right, #6366F1, #3B82F6);
     backdrop-filter: blur(10px);
 }
 

@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to open modal
     function openModal() {
-        modal.classList.remove('pointer-events-none');
+        modal.classList.remove('pointer-events-none', 'hidden');
         gsap.to(modal, {opacity: 1, duration: 0.5});
         gsap.fromTo('#walkthruVideo', 
             {opacity: 0},
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to close modal
     function closeModalFunc() {
         gsap.to(modal, {opacity: 0, duration: 0.5, onComplete: () => {
-            modal.classList.add('pointer-events-none');
+            modal.classList.add('pointer-events-none', 'hidden');
             video.pause();
         }});
 

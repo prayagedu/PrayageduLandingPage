@@ -66,7 +66,7 @@ $(function() {
         obj.JSON = json;
 
         console.log("Final payload:", obj);
-        // TransportCall(obj); // <-- call your backend handler
+        TransportCall(obj); // <-- call your backend handler
     });
 
     // ##########################    validation modal end  $######################

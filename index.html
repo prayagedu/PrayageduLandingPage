@@ -11,7 +11,7 @@
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 </head>
-<body class="bg-gray-50 overflow-y-scroll w-screen h-full overscroll-none relative">
+<body class="bg-white overflow-y-scroll w-screen h-full overscroll-none relative">
     <div id="toast-container"></div>
 
     <!-- Navigation -->
@@ -35,12 +35,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section w-full gradient-bg tech-grid min-h-screen h-auto flex items-center relative overflow-hidden">
+    <section class="hero-section w-full bg-gradient-to-r from-indigo-500 to-blue-500 gradient-bg tech-grid min-h-screen h-auto flex items-center relative overflow-hidden">
+        <!-- <img src="/imgassets/gradient.png" class="w-full h-full absolute top-0 left-0 -z-[30]"> -->
         <div class="absolute w-72 h-72 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full opacity-40 blur-3xl animate-float" style="top:10%; left:5%;"></div>
         <div class="absolute w-96 h-96 bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500 rounded-full opacity-30 blur-3xl animate-float" style="top:50%; left:70%;"></div>
         <div class="absolute w-80 h-80 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 rounded-full opacity-20 blur-3xl animate-float" style="top:30%; left:40%;"></div>
 
-        <div id="videoModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500 z-50">
+        <div id="videoModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500 z-[9999]">
             <div class="relative w-[98%] md:w-[70%] h-[40%] md:h-[70%] rounded-xl bg-white overflow-hidden shadow-2xl">
                 <button id="closeModal" class="absolute top-4 right-4 text-white bg-gray-800/50 px-3 py-1 rounded-full hover:bg-gray-900 transition z-10">✕</button>
                 <video id="walkthruVideo" class="w-full h-full object-cover rounded-xl opacity-0" controls>
@@ -162,7 +163,7 @@
     </section>
 
     <!-- Core Features Section -->
-    <section class="features pt-12 pb-6 md:py-20 relative w-full h-auto flex flex-col gap-5">
+    <section id="features" class="features pt-12 pb-6 md:py-20 relative w-full h-auto flex flex-col gap-5">
         <!-- <div class="absolute -z-10 h-[600px] w-[400px] rotate-[30deg] bottom-0 left-0">
             <img src="/imgassets/profile.jpeg" class="w-full h-full rounded-xl opacity-30">
         </div> -->
@@ -524,8 +525,8 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="final py-8 px-2 text-center overflow-hidden bg-white">
-        <div class="max-w-7xl gradient-bg2 p-12 rounded-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="final py-8  px-2 text-center overflow-hidden bg-white">
+        <div class="max-w-7xl bg-gradient-to-r from-indigo-500 to-blue-500  p-12 rounded-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl md:text-5xl font-bold text-white mb-6 cta-heading opacity-0 translate-y-10">Ready to save time and reduce admin headaches?</h2>
             <p class="text-md md:text-xl text-blue-100 mb-8 cta-subheading opacity-0 translate-y-10">Join 100+ schools already using PrayagEdu to streamline their operations</p>
             <button class="bg-yellow-400 text-gray-900 px-12 py-4 rounded-full font-bold text-xl hover:bg-yellow-300 transition pulse-glow cta-btn opacity-0 translate-y-10">
@@ -595,7 +596,7 @@
     </section>
 
     <!-- Demo Form Section -->
-    <section class="form py-20 gradient-bg w-full h-fit tech-grid relative">
+    <section class="form py-20 bg-gradient-to-r from-indigo-500 to-blue-500 gradient-bg w-full h-fit tech-grid relative">
         <div class="absolute w-72 h-72 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 rounded-full opacity-40 blur-3xl animate-float1" style="top:10%; left:5%;"></div>
         <div class="absolute w-96 hidden xl:flex h-96 bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-100 rounded-full opacity-30 blur-3xl animate-float1" style="top:50%; left:70%;"></div>
         <div class="absolute w-80 h-80 bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300 rounded-full opacity-20 blur-3xl animate-float1" style="top:30%; left:40%;"></div>
@@ -704,10 +705,10 @@
     <script src = "/js/CallService.js"></script>
     <script src = "/js/transport.js"></script>
     <script src = "/js/toaster.js"></script>
+    <script src = "/js/md5.js"></script>
     <!-- <script src = "/js/app.js"></script> -->
     <!-- <script src = "/js/commonfunctions.js"></script> -->
     <!-- <script src = "/js/main.js"></script> -->
-    <!-- <script src = "/js/md5.js"></script> -->
 
     <script>
     const swiper = new Swiper(".mySwiper", {
